@@ -34,7 +34,7 @@ export function ShowCode(props: Props) {
     return (
         <div className="flex m-5">
             <pre className="secondary-color-bg relative p-2 w-80 sm:w-100">
-                <button className="absolute top-0 right-0 bg-blue-400 text-white rounded-xs cursor-pointer" onClick={handleCopyText}>{copybuttonText}</button>
+                <button className="absolute top-0 right-0 bg-blue-500 p-2 lg:p-3 text-white rounded-xs cursor-pointer mt-1 mr-1" onClick={handleCopyText}>{copybuttonText}</button>
                 <code className="sm:text-xl" dangerouslySetInnerHTML={{ __html: highlightedCode.value }}></code>
             </pre>
         </div>

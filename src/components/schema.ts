@@ -3,15 +3,15 @@ import { AvailableTypes, Property } from "../types";
 export class Schema {
     private properties: Property[] = [];
 
-    public addKey(name: string, type: AvailableTypes, arrayOf: AvailableTypes | null) {
-        if (this.isDuplicate(name)) {
+    public addKey(property: Property) {
+        if (this.isDuplicate(property.name)) {
             throw new Error("Cannot have duplicate key names.")
         }
         this.properties.push({
-            name: name,
-            type: type,
-            arrayOf: arrayOf,
-            required: true
+            name: property.name,
+            type: property.type,
+            arrayOf: property.arrayOf,
+            required: property.required
         });
     }
 
@@ -28,7 +28,6 @@ export class Schema {
         for (let i = 0; i < this.properties.length; i++) {
             if (this.properties[i].name === name) {
                 this.properties[i].required = required;
-                console.log(this.properties[i]);
                 return;
             }
         }
