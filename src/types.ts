@@ -5,11 +5,14 @@ export enum AvailableTypes {
     Array = "array",
     Enum = "enum",
     AnyOf = "anyOf",
+    Number = "number",
 }
 
 export interface Property {
     name: string,
-    type: AvailableTypes
+    type: AvailableTypes,
+    arrayOf: AvailableTypes | null,
+    required: boolean
 }
 
 export interface Object {
