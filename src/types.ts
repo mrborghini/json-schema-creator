@@ -6,6 +6,7 @@ export enum AvailableTypes {
     Array = "array",
     // Enum = "enum",
     AnyOf = "anyOf",
+    Boolean = "boolean",
 }
 
 export interface Property {
