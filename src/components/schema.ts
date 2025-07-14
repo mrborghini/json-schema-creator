@@ -60,7 +60,7 @@ export class Schema {
             if (i !== this.properties.length - 1) {
                 jsonString += ","
             } else {
-                jsonString += "},\"required\":["
+                jsonString += "},\"additionalProperties\": false,\"required\":["
                 for (let j = 0; j < this.properties.length; j++) {
                     const property = this.properties[j];
                     if (!property.required) {

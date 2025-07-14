@@ -13,9 +13,10 @@ export interface Property {
     name: string,
     type: AvailableTypes,
     arrayOf: AvailableTypes | null,
-    required: boolean
+    required: boolean,
 }
 
 export interface Object {
-    properties: Property[]
+    properties: Property[],
+    additionalProperies: boolean,
 }
